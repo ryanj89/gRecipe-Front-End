@@ -3,20 +3,39 @@ $dark-background: #465765;
 
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background: $light-background;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+ol.recipe-steps {
+  li {
+    line-height: 50px;
+  }
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.step {
+  margin: 0;
 }
 
 .main-header {
     background: url('../assets/banana-waffle.jpg') center / cover;
     height: 90vh;
 }
-.header {
-  background: $dark-background;
-}
 
-nav {
+.main-nav {
   box-shadow: none;
   background: transparent;
+}
+.navbar {
+  background: $dark-background;
 }
 
 .recipe-rating {

@@ -1,16 +1,31 @@
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   background: #FCFCFC; }
+
+main {
+  flex: 1 0 auto; }
+
+ol.recipe-steps {
+  padding-left: 0;
+  list-style-position: inside; }
+  ol.recipe-steps li {
+    line-height: 50px; }
+
+.step {
+  margin: 0; }
 
 .main-header {
   background: url("../assets/banana-waffle.jpg") center/cover;
   height: 90vh; }
 
-.header {
-  background: #465765; }
-
-nav {
+.main-nav {
   box-shadow: none;
   background: transparent; }
+
+.navbar {
+  background: #465765; }
 
 .recipe-rating {
   display: flex;

@@ -24,9 +24,9 @@
 
             <!-- Navbar -->
             <div class="navbar-fixed">
-               <nav>
+               <nav class="navbar">
                   <div class="nav-wrapper">
-                     <a href="#" class="brand-logo">gRecipes</a>
+                     <a href="./index.html" class="brand-logo">gRecipes</a>
                      <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
                      <ul id="nav-mobile" class="right hide-on-med-and-down">
                         <li class="active"><a href="#">View Recipes</a></li>
@@ -48,9 +48,76 @@
 
       <!-- Main -->
       <main>
-         <section class="section">
+         <div class="container">
+            <div class="row">
+               <section class="section">
 
-         </section>
+                  <h4>New Recipe</h4>
+                  <form class="col s12">
+                     <!-- Title -->
+                     <div class="row">
+                       <div class="input-field col m6 s12">
+                         <input id="recipe_title" type="text" class="validate">
+                         <label for="recipe_title">Title</label>
+                       </div>
+                     </div>
+
+                     <!-- Author -->
+                     <div class="row">
+                        <div class="input-field col m6 s12">
+                           <input id="recipe_author" type="text" class="validate">
+                           <label for="recipe_author">Author</label>
+                        </div>
+                     </div>
+
+                     <!-- Description -->
+                     <div class="row">
+                       <div class="input-field col m8 s12">
+                         <textarea id="recipe_description" class="materialize-textarea"></textarea>
+                         <label for="recipe_description">Description</label>
+                       </div>
+                     </div>
+
+                     <!-- Image -->
+                     <div class="row">
+                       <div class="input-field col m6 s12">
+                         <input id="recipe_image" type="text" class="validate">
+                         <label for="recipe_image">Image URL</label>
+                       </div>
+                     </div>
+
+                     <!-- Add Step -->
+                     <div class="row">
+                        <div class="input-field col m6 s12">
+                           <button id="add-step" class="btn-floating waves-effect waves-light teal" type="button"><i class="material-icons">add</i></button><span> Add Another Step</span>
+                        </div>
+                     </div>
+
+                     <!-- Steps -->
+                     <label for="recipe_step">Directions</label>
+                     <ol class="recipe-steps">
+                        <li class="row">
+                           <div class="step input-field inline right col s11">
+                              <input placeholder="Add directions here" id="recipe_step" type="text" class="validate">
+                           </div>
+                        </li>
+                     </ol>
+
+                     <br><div class="divider"></div><br>
+
+                     <!-- Submit -->
+                     <div class="row">
+                        <div class="input-field col m6 s12">
+                           <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
+                        </div>
+                     </div>
+
+
+                  </form>
+               </section>
+
+            </div>
+         </div>
       </main>
       <!-- ./Main -->
 
@@ -68,9 +135,6 @@
               </div>
             </div>
          </div>
-         <!-- <div class="footer-copyright">
-
-         </div> -->
       </footer>
       <!-- ./Footer -->
 
