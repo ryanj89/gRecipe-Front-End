@@ -1,0 +1,23 @@
+body {
+  background: #FCFCFC; }
+
+.main-header {
+  background: url("../assets/banana-waffle.jpg") center/cover;
+  height: 90vh; }
+
+.header {
+  background: #465765; }
+
+nav {
+  box-shadow: none;
+  background: transparent; }
+
+.recipe-rating {
+  display: flex;
+  align-items: center; }
+
+footer.page-footer {
+  height: 10vh;
+  background: #465765; }
+
+/*# sourceMappingURL=main.css.map */

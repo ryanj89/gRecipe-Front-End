@@ -1,0 +1,22 @@
+{
+  "name": "grecipe-front-end",
+  "version": "1.0.0",
+  "description": "Front-end for the gRecipe website.",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanj89/gRecipe-Front-End.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanj89/gRecipe-Front-End/issues"
+  },
+  "homepage": "https://github.com/ryanj89/gRecipe-Front-End#readme"
+}
