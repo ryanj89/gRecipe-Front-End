@@ -5,7 +5,7 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <title>gRecipe</title>
+      <title>gRecipes</title>
 
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -54,24 +54,27 @@
                <section class="section recipe-section">
                   <!-- Recipe Image -->
                   <div class="col s12 m7">
-                     <img class="recipe-image responsive-img" src="https://goo.gl/xx2Sfr" alt="recipe-image">
+                     <img class="recipe-image responsive-img" src="" alt="recipe-image">
                   </div>
 
                   <!-- Recipe Info -->
                   <div class="recipe-info col s12 m5">
                      <!-- Recipe Title -->
-                     <h5 class="recipe-title">Really Long Recipe Title with Even More Stuff At the End</h5>
+                     <h5 class="recipe-title"></h5>
                      <!-- Recipe Rating -->
                      <p class="recipe-rating"><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></p>
                      <!-- Recipe Author -->
                      <p class="recipe-author">
                         <span class="byline">Recipe by: </span>
-                        <span class="author-name">Ryan Johnson</span>
+                        <span class="author-name"></span>
                      </p>
 
                      <div class="button-section">
                         <!-- Edit Recipe Button -->
-                        <button id="edit-recipe-btn" class="btn indigo lighten-2 waves-effect waves-light" type="button" name="edit-recipe-btn"><i class="material-icons left">edit</i>Edit</button>
+                        <a id="edit-recipe-btn" href="./edit-review.html" class="btn indigo lighten-2 waves-effect waves-light">
+                           <i class="material-icons left">edit</i>
+                           Edit
+                        </a>
                         <!-- Delete Recipe Button -->
                         <button id="delete-recipe-btn" class="btn red darken-2 waves-effect waves-light" type="button" name="delete-recipe-btn"><i class="material-icons left">delete</i>Delete</button>
                      </div>
@@ -79,10 +82,6 @@
                      <!-- Recipe Ingredients -->
                      <ul class="recipe-ingredients collection with-header">
                         <h5 class="collection-header italic">Ingredients</h5>
-                        <li><a href="#" class="collection-item">Eggs</a></li>
-                        <li><a href="#" class="collection-item">Eggs</a></li>
-                        <li><a href="#" class="collection-item">Eggs</a></li>
-                        <li><a href="#" class="collection-item">Eggs</a></li>
                      </ul>
 
                   </div>
@@ -102,12 +101,7 @@
                <section class="recipe-directions section col s12">
                   <h5 class="italic">Directions</h5>
                   <ol class="recipe-steps">
-                     <li>Step 1</li>
-                     <li>Step 2</li>
-                     <li>Step 3</li>
-                     <li>Step 4</li>
-                     <li>Step 5</li>
-                     <li>Step 6</li>
+
                   </ol>
                </section>
             </div>
@@ -123,7 +117,7 @@
                      <!-- User Name -->
                      <div class="row">
                         <div class="input-field col m4 s12">
-                           <input type="text" name="user_name" class="validate">
+                           <input id="review-user" type="text" name="user_name" class="validate">
                            <label for="user_name">Name</label>
                         </div>
                      </div>
@@ -131,7 +125,7 @@
                      <!-- Rating -->
                      <div class="row">
                         <div class="input-field col m1 s12">
-                           <select>
+                           <select id="rating">
                               <option value="1">1</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -147,7 +141,7 @@
                         <div class="input-field col m8 s12">
                            <textarea id="body" class="materialize-textarea"></textarea>
                            <label for="body">Content</label>
-                           <button class="btn waves-effect waves-light">Submit
+                           <button id="submit-review-btn" class="btn waves-effect waves-light">Submit
                               <i class="material-icons right">send</i>
                            </button>
                         </div>
@@ -164,22 +158,6 @@
             <div class="row">
                <section class="review-section section col s12">
                   <h5 class="italic">Reviews</h5>
-
-                  <div class="card hoverable">
-                     <div class="card-content">
-                        <span class="card-title italic">RJ</span>
-                        <p class="recipe-rating">Rating: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></p>
-                        <blockquote>
-                           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </blockquote>
-                     </div>
-                     <div class="card-action">
-                           <!-- Edit Review Button -->
-                           <button id="edit-review-btn" class="btn indigo lighten-2 waves-effect waves-light" type="button" name="edit-review-btn"><i class="material-icons left">edit</i>Edit</button>
-                           <!-- Delete Review Button -->
-                           <button id="delete-review-btn" class="btn red darken-2 waves-effect waves-light" type="button" name="delete-review-btn"><i class="material-icons left">delete</i>Delete</button>
-                     </div>
-                  </div>
 
                </section>
             </div>

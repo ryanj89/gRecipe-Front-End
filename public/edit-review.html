@@ -5,7 +5,7 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <title>gRecipes</title>
+      <title>gRecipes: Edit Review</title>
 
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,17 +20,17 @@
    <body>
 
       <!-- Header -->
-      <header class="main-header">
+      <header class="header">
 
             <!-- Navbar -->
             <div class="navbar-fixed">
-               <nav class="main-nav">
+               <nav class="navbar">
                   <div class="nav-wrapper">
-                     <a href="#" class="brand-logo">gRecipes</a>
+                     <a href="./index.html" class="brand-logo">gRecipes</a>
                      <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
                      <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li class="active"><a href="#">View Recipes</a></li>
-                        <li><a href="./new-recipe.html">Create a Recipe</a></li>
+                        <li><a href="./index.html">View Recipes</a></li>
+                        <li class="active"><a href="./new-recipe.html">Create a Recipe</a></li>
                      </ul>
                      <ul class="side-nav" id="mobile-nav">
                         <li class="center"><a href="#">gRecipes</a></li>
@@ -49,12 +49,50 @@
       <!-- Main -->
       <main>
          <div class="container">
-            <!-- Recipe Section -->
-            <div class="recipe-section section row">
-               <h4>Recipes</h4>
+            <div class="section row">
+               <h5>Edit Recipe</h5>
+               <form class="recipe-review-form">
 
+                  <!-- User Name -->
+                  <div class="row">
+                     <div class="input-field col m4 s12">
+                        <input id="review-user" type="text" name="user_name" class="validate">
+                        <label for="user_name">Name</label>
+                     </div>
+                  </div>
+
+                  <!-- Rating -->
+                  <div class="row">
+                     <div class="input-field col m1 s12">
+                        <select id="rating">
+                           <option value="1">1</option>
+                           <option value="2">2</option>
+                           <option value="3">3</option>
+                           <option value="4">4</option>
+                           <option value="5">5</option>
+                        </select>
+                        <label>Rating</label>
+                     </div>
+                  </div>
+
+                  <!-- Comment Body -->
+                  <div class="row">
+                     <div class="input-field col m8 s12">
+                        <textarea id="body" class="materialize-textarea">Content</textarea>
+                        <label for="body">Content</label>
+                        <button id="submit-review-btn" class="btn waves-effect waves-light">Submit
+                           <i class="material-icons right">send</i>
+                        </button>
+                     </div>
+                  </div>
+
+               </form>
             </div>
          </div>
+
+
+
+
       </main>
       <!-- ./Main -->
 
@@ -72,9 +110,6 @@
               </div>
             </div>
          </div>
-         <!-- <div class="footer-copyright">
-
-         </div> -->
       </footer>
       <!-- ./Footer -->
 
@@ -87,6 +122,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
       <!-- Custom JavaScript -->
-      <script src="./js/index.js" charset="utf-8"></script>
+      <script src="./js/edit-review.js" charset="utf-8"></script>
    </body>
 </html>
