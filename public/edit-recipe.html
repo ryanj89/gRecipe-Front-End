@@ -52,28 +52,20 @@
             <div class="row">
                <section class="section">
 
-                  <h4>New Recipe</h4>
+                  <h4>Edit Recipe</h4>
                   <form class="col s12">
                      <!-- Title -->
                      <div class="row">
                        <div class="input-field col m6 s12">
-                         <input id="recipe_title" name="recipe_name" type="text" class="validate">
+                         <input id="recipe_title" placeholder="" type="text" class="validate">
                          <label for="recipe_title">Title</label>
                        </div>
-                     </div>
-
-                     <!-- Author -->
-                     <div class="row">
-                        <div class="input-field col m6 s12">
-                           <input id="recipe_author" name="recipe_author" type="text" class="validate">
-                           <label for="recipe_author">Author</label>
-                        </div>
                      </div>
 
                      <!-- Image -->
                      <div class="row">
                         <div class="input-field col m6 s12">
-                           <input id="recipe_image" name="recipe_image" type="text" class="validate">
+                           <input id="recipe_image" placeholder="" name="recipe_image" type="text" class="validate">
                            <label for="recipe_image">Image URL</label>
                         </div>
                      </div>
@@ -93,16 +85,7 @@
                      <label>Ingredients</label>
                      <ul class="recipe-ingredients">
                         <li class="row">
-                           <button class="remove-btn btn-floating waves-effect waves-light right red" type="button">
-                              <i class="material-icons">remove</i>
-                           </button>
-                           <div class="quantity input-field inline col s2">
-                              <label>Quantity</label>
-                              <input placeholder="Qty" type="text" name="ingredient_quantity1" class="ingredient-quantity validate">
-                           </div>
-                           <div class="ingredient input-field inline col s9">
-                              <input placeholder="Add ingredient here" name="recipe_ingredient1" type="text" class="ingredient-name validate">
-                           </div>
+
                         </li>
                      </ul>
 
@@ -121,14 +104,7 @@
                      <!-- Steps -->
                      <label>Directions</label>
                      <ol class="recipe-steps">
-                        <li class="row">
-                           <button class="remove-btn btn-floating waves-effect waves-light right red" type="button">
-                              <i class="material-icons">remove</i>
-                           </button>
-                           <div class="step input-field inline right col s11">
-                              <input placeholder="Add directions here" name="recipe_step1" type="text" class="recipe-step validate">
-                           </div>
-                        </li>
+
                      </ol>
 
                      <br><div class="divider"></div><br>
@@ -178,6 +154,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
       <!-- Custom JavaScript -->
-      <script src="./js/new-recipe.js" charset="utf-8"></script>
+      <script src="./js/edit-recipe.js" charset="utf-8"></script>
    </body>
 </html>
