@@ -1,5 +1,6 @@
-$light-background: #FCFCFC;
-$dark-background: #465765;
+$light-background: #F2F2F2;
+$dark-background: #073B3A;
+$accent-grey: #828A95;
 
 
 body {
@@ -7,6 +8,10 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background: $light-background;
+}
+
+h5 {
+
 }
 
 main {
@@ -21,8 +26,14 @@ ol.recipe-steps {
   list-style-position: inside;
 }
 
-.step {
+.step,
+.ingredient,
+.quantity {
   margin: 0;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .main-header {
@@ -38,9 +49,39 @@ ol.recipe-steps {
   background: $dark-background;
 }
 
+#edit-recipe-btn,
+#delete-recipe-btn {
+  text-align: center;
+  margin: 8px 0;
+  // width: 75%;
+}
+
+// Recipe Page
+.byline {
+  color: $accent-grey;
+}
 .recipe-rating {
+  .material-icons {
+    color: gold;
+  }
   display: flex;
   align-items: center;
+}
+
+.recipe-ingredients {
+  .collection-item {
+    background-color: $light-background;
+  }
+  border: none;
+}
+.collection.with-header {
+  h5.collection-header {
+    background-color: $light-background;
+  }
+}
+
+.italic {
+  font-style: italic;
 }
 
 footer.page-footer {

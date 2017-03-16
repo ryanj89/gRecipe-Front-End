@@ -5,7 +5,7 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <title>gRecipe</title>
+      <title>gRecipes: New Recipe</title>
 
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,8 +29,8 @@
                      <a href="./index.html" class="brand-logo">gRecipes</a>
                      <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
                      <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li class="active"><a href="#">View Recipes</a></li>
-                        <li><a href="./new-recipe.html">Create a Recipe</a></li>
+                        <li><a href="./index.html">View Recipes</a></li>
+                        <li class="active"><a href="./new-recipe.html">Create a Recipe</a></li>
                      </ul>
                      <ul class="side-nav" id="mobile-nav">
                         <li class="center"><a href="#">gRecipes</a></li>
@@ -57,7 +57,7 @@
                      <!-- Title -->
                      <div class="row">
                        <div class="input-field col m6 s12">
-                         <input id="recipe_title" type="text" class="validate">
+                         <input id="recipe_title" name="recipe_name" type="text" class="validate">
                          <label for="recipe_title">Title</label>
                        </div>
                      </div>
@@ -65,40 +65,57 @@
                      <!-- Author -->
                      <div class="row">
                         <div class="input-field col m6 s12">
-                           <input id="recipe_author" type="text" class="validate">
+                           <input id="recipe_author" name="recipe_author" type="text" class="validate">
                            <label for="recipe_author">Author</label>
                         </div>
                      </div>
 
-                     <!-- Description -->
-                     <div class="row">
-                       <div class="input-field col m8 s12">
-                         <textarea id="recipe_description" class="materialize-textarea"></textarea>
-                         <label for="recipe_description">Description</label>
-                       </div>
-                     </div>
-
                      <!-- Image -->
                      <div class="row">
-                       <div class="input-field col m6 s12">
-                         <input id="recipe_image" type="text" class="validate">
-                         <label for="recipe_image">Image URL</label>
-                       </div>
+                        <div class="input-field col m6 s12">
+                           <input id="recipe_image" name="recipe_image" type="text" class="validate">
+                           <label for="recipe_image">Image URL</label>
+                        </div>
                      </div>
+
+                     <!-- Add Ingredient -->
+                     <div class="row">
+                        <div class="input-field col m6 s12">
+                           <button id="add_ingredient" class="btn-floating waves-effect waves-light teal" type="button"><i class="material-icons">add</i></button><span> Add Ingredient</span>
+                        </div>
+                     </div>
+
+
+                     <!-- Ingredients -->
+                     <ul class="recipe-ingredients">
+                        <li class="row">
+                           <div class="quantity input-field inline col s2">
+                              <label>Quantity</label>
+                              <input placeholder="#" type="number" name="ingredient_quantity1" class="ingredient-quantity validate">
+                           </div>
+                           <div class="ingredient input-field inline col s9">
+                              <label>Ingredients</label>
+                              <input placeholder="Add ingredient here" name="recipe_ingredient1" type="text" class="ingredient-name validate">
+                           </div>
+                        </li>
+                     </ul>
+
 
                      <!-- Add Step -->
                      <div class="row">
                         <div class="input-field col m6 s12">
-                           <button id="add-step" class="btn-floating waves-effect waves-light teal" type="button"><i class="material-icons">add</i></button><span> Add Another Step</span>
+                           <button id="add_step" class="btn-floating waves-effect waves-light teal" type="button"><i class="material-icons">add</i></button><span> Add Step</span>
                         </div>
                      </div>
 
+
                      <!-- Steps -->
-                     <label for="recipe_step">Directions</label>
+                     <label>Directions</label>
                      <ol class="recipe-steps">
                         <li class="row">
+                           <button class="hidden remove-btn btn-floating waves-effect waves-light right red" type="button"><i class="material-icons">remove</i></button>
                            <div class="step input-field inline right col s11">
-                              <input placeholder="Add directions here" id="recipe_step" type="text" class="validate">
+                              <input placeholder="Add directions here" name="recipe_step1" type="text" class="recipe-step validate">
                            </div>
                         </li>
                      </ol>
@@ -108,7 +125,7 @@
                      <!-- Submit -->
                      <div class="row">
                         <div class="input-field col m6 s12">
-                           <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
+                           <button id="submit_recipe" class="btn waves-effect waves-light">Submit<i class="material-icons right">send</i></button>
                         </div>
                      </div>
 

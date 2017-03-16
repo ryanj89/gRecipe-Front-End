@@ -1,0 +1,21 @@
+"recipe" = {
+  "name": "recipe name",
+  "user_name": "RJ",
+  "recipe_url": "https://las-vegas.eat24hours.com/files/cuisines/v4/thai.jpg",
+}
+
+"steps" = [{
+  "body": "Directions go here",
+  "step_number": 1,
+},
+{
+  "body": "Directions go here",
+  "step_number": 2,
+}]
+
+
+
+"ingredients" = {
+  "name": "egg",
+  "quantity": 6,
+}

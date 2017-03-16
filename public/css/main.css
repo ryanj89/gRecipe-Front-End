@@ -2,7 +2,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background: #FCFCFC; }
+  background: #F2F2F2; }
 
 main {
   flex: 1 0 auto; }
@@ -13,8 +13,13 @@ ol.recipe-steps {
   ol.recipe-steps li {
     line-height: 50px; }
 
-.step {
+.step,
+.ingredient,
+.quantity {
   margin: 0; }
+
+.hidden {
+  visibility: hidden; }
 
 .main-header {
   background: url("../assets/banana-waffle.jpg") center/cover;
@@ -25,14 +30,35 @@ ol.recipe-steps {
   background: transparent; }
 
 .navbar {
-  background: #465765; }
+  background: #073B3A; }
+
+#edit-recipe-btn,
+#delete-recipe-btn {
+  text-align: center;
+  margin: 8px 0; }
+
+.byline {
+  color: #828A95; }
 
 .recipe-rating {
   display: flex;
   align-items: center; }
+  .recipe-rating .material-icons {
+    color: gold; }
+
+.recipe-ingredients {
+  border: none; }
+  .recipe-ingredients .collection-item {
+    background-color: #F2F2F2; }
+
+.collection.with-header h5.collection-header {
+  background-color: #F2F2F2; }
+
+.italic {
+  font-style: italic; }
 
 footer.page-footer {
   height: 10vh;
-  background: #465765; }
+  background: #073B3A; }
 
 /*# sourceMappingURL=main.css.map */
