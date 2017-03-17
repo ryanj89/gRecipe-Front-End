@@ -44,7 +44,7 @@ $(document).ready(() => {
     // Post Recipe
     $.post('https://recipe-db.herokuapp.com/recipes', recipe)
       .then((recipeId) => {
-        
+
         // Post Steps
         const steps = $('input.recipe-step').get().map((item, i) => {
           let obj = { };
@@ -80,6 +80,9 @@ $(document).ready(() => {
                   return;
                 });
             });
+        })
+        .then(() => {
+          window.location.href = './index.html';
         });
       });
   });

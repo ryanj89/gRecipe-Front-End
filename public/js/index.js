@@ -1,27 +1,23 @@
 $(document).ready(() => {
   $('.button-collapse').sideNav();
-  console.log('Hi');
-
-
-
-
-
-  // Get user names
-  function getUsers() {
-    return $.get('https://recipe-db.herokuapp.com/users');
-  }
 
   // Get all recipes
   $.get('https://recipe-db.herokuapp.com/recipes')
     .then((recipes) => {
+      console.log(recipes);
       // For each recipe, get the author's name
       recipes.forEach((recipe) => {
-        $.get('https://recipe-db.herokuapp.com/users/' + recipe.user_id)
-          .then((user) => {
-            recipe['author'] = user.name;
-            createRecipeCard(recipe);
-          });
-
+        console.log('user_id: ', recipe.user_id);
+        // If user_id exists, get author name
+        if (recipe.user_id != null) {
+          $.get('https://recipe-db.herokuapp.com/users/' + recipe.user_id)
+            .then((user) => {
+              recipe['author'] = user.name;
+              createRecipeCard(recipe);
+            });
+        } else {
+          return;
+        }
       });
     });
 

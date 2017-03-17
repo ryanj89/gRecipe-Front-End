@@ -18,9 +18,18 @@ $(document).ready(() => {
 
   // Get single post by recipe id
   $.get(recipeQuery).then((recipe) => {
+    console.log(recipe.avg);
     $('.recipe-title').text(recipe.name);
     $('.recipe-image').attr('src', recipe.url);
-
+    const $rating = $('.recipe-rating');
+    if (recipe.avg != null) {
+      for (var i = 0; i < parseInt(recipe.avg); i++) {
+        const $star = $('<i class="material-icons">star</i>');
+        $rating.append($star);
+      }
+    } else {
+      $rating.append('<span class="byline italic">No Ratings Yet</span>')
+    }
     // Get user name by recipe.user_id
     $.get(usersQuery + recipe.user_id).then((user) => {
       $('.author-name').text(user.name);
@@ -54,17 +63,19 @@ $(document).ready(() => {
       });
     });
 
+
     // Get reviews and filter by recipe id
     $.get(reviewsQuery).then((reviews) => {
       const matchedReviews = reviews.filter((review) => {
         return review.recipe_id == recipeId;
       });
+      // Append review count to rating
+      $rating.append(`(${matchedReviews.length})`)
       // Create review cards on page
       matchedReviews.forEach((matchedReview) => {
         // console.log(matchedReview);
         $.get(usersQuery + matchedReview.user_id).then((user) => {
           matchedReview['name'] = user.name;
-          console.log(matchedReview);
           createReviewCard(matchedReview);
         });
       });
@@ -99,7 +110,7 @@ $(document).ready(() => {
                               <blockquote>${reviewObj.body}</blockquote>
                            </div>
                            <div class="card-action">
-                              <a id="edit-review-btn" href="./edit-review.html?id=${reviewObj.id}" class="btn indigo lighten-2 waves-effect waves-light">
+                              <a id="edit-review-btn" href="./edit-review.html?id=${reviewObj.id}&recipe_id=${reviewObj.recipe_id}" class="btn indigo lighten-2 waves-effect waves-light">
                                  <i class="material-icons left">edit</i>
                                  Edit
                               </a>
