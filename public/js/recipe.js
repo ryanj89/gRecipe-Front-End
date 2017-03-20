@@ -92,9 +92,24 @@ $(document).ready(() => {
       recipe_id: recipeId,
       rating: $('#rating').val(),
     }
-    console.log('Review: ', review);
-    $.post(reviewsQuery, review).then((result) => {
-      console.log('Result: ', result);
+    $.post(reviewsQuery, review)
+      .then((result) => {
+        window.location.reload();
+    });
+  });
+
+  // Delete review
+  $(document).on('click', '#delete-review-btn', (e) => {
+    e.preventDefault();
+    const id = e.target.value;
+    console.log(reviewsQuery + '/' + id);
+    $.ajax({
+      url: reviewsQuery + '/' + id,
+      method: 'DELETE',
+      success: () => {
+        window.location.href = `./index.html`;
+        // window.location.reload();
+      }
     });
   });
 
@@ -114,7 +129,7 @@ $(document).ready(() => {
                                  <i class="material-icons left">edit</i>
                                  Edit
                               </a>
-                              <button id="delete-review-btn" class="btn red darken-2 waves-effect waves-light" type="button">
+                              <button id="delete-review-btn" class="btn red darken-2 waves-effect waves-light" name="id" value="${reviewObj.id}">
                                  <i class="material-icons left">delete</i>
                                  Delete
                               </button>

@@ -32,6 +32,11 @@ ol.recipe-steps {
 .navbar {
   background: #073B3A; }
 
+.recipe-card {
+  max-height: 310px; }
+  .recipe-card img {
+    max-height: 210px; }
+
 #edit-recipe-btn,
 #delete-recipe-btn {
   text-align: center;

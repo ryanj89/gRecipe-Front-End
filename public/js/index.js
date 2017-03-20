@@ -25,25 +25,22 @@ $(document).ready(() => {
     console.log(recipe);
     const $card = `<div class="col s12 m4">
             <!-- Recipe Card -->
-            <div class="card hoverable">
+            <div class="recipe-card card hoverable">
 
                <!-- Recipe Image -->
                <a href="./recipe.html?id=${recipe.id}" class="card-image waves-effect waves-block waves-light">
-                  <img src="${recipe.url}">
+                  <img class="responsive-img" src="${recipe.url}">
                   <span class="card-title recipe-title">${recipe.name}</span>
                </a>
 
                <!-- Recipe Content -->
                <div class="card-content">
-                  <p class="recipe-author">${recipe.author}</p>
+                  <p class="recipe-author">Created by: ${recipe.author}</p>
 
                   <!-- Recipe Rating -->
                   <div class="recipe-rating">
                      <p class="recipe-rating">Rating: <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i></p>
                   </div>
-
-                  <br><div class="divider"></div><br>
-                  <p>A brief description of the dish goes here.</p>
 
                </div>
 

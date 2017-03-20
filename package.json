@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Front-end for the gRecipe website.",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

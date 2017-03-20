@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>gRecipes</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <!-- Navbar -->
+        <div class="navbar-fixed">
+            <nav class="navbar">
+                <div class="nav-wrapper">
+                    <a href="./index.html" class="brand-logo">gRecipes</a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="./index.html">View Recipes</a></li>
+                        <li><a href="./ingredients.html">View Ingredients</a></li>
+                        <li><a href="./new-recipe.html">Create a Recipe</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-nav">
+                        <li class="center"><a href="#">gRecipes</a></li>
+                        <li><a href="./index.html">View Recipes</a></li>
+                        <li><a href="./ingredients.html">View Ingredients</a></li>
+                        <li><a href="./new-recipe.html">Create a Recipe</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- ./Navbar -->
+
+        </div>
+
+    </header>
+    <!-- ./Header -->
+
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <section class="ingredients-section section">
+                    <h4 id="ingredient-name"></h4>
+
+                    <table class="col s12">
+                        <thead>
+                            <tr>
+                                <th data-field="name">Recipe Name</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="ingredients-table">
+
+                        </tbody>
+                    </table>
+
+                </section>
+            </div>
+        </div>
+
+    </main>
+    <!-- ./Main -->
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col l6 s12">
+                    <a class="grey-text text-lighten-3" href="#!">View Recipes</a>
+                    <a class="grey-text text-lighten-3" href="#!">Create a Recipe</a>
+                </div>
+                <div class="col l6 s12">
+                    <span class="right">© 2014 Copyright g43</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ./Footer -->
+
+    <!-- Scripts -->
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./js/ingredient.js" charset="utf-8"></script>
+</body>
+
+</html>

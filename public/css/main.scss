@@ -45,6 +45,13 @@ ol.recipe-steps {
   background: $dark-background;
 }
 
+.recipe-card {
+  max-height: 310px;
+  img {
+    max-height: 210px;
+  }
+}
+
 #edit-recipe-btn,
 #delete-recipe-btn {
   text-align: center;
